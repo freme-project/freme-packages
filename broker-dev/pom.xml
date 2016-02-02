@@ -24,4 +24,22 @@
 			</releases>
 		</repository>
 	</repositories>
+	<dependencies>
+		<dependency>
+			<groupId>eu.freme.bservices</groupId>
+			<artifactId>user-controller</artifactId>
+			<version>0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>eu.freme.e-services</groupId>
+			<artifactId>tilde-services</artifactId>
+			<version>0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>eu.freme.bservices</groupId>
+			<artifactId>package-maker</artifactId>
+			<version>0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+	
 </project>
