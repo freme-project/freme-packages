@@ -6,7 +6,6 @@
 		<artifactId>package-parent</artifactId>
 		<version>0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>broker-standalone</groupId>
 	<artifactId>broker-standalone</artifactId>
 
 	<dependencies>
