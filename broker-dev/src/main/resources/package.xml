@@ -8,7 +8,12 @@
 	http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<import resource="classpath:spring-configurations/freme-common.xml" />
-	<import resource="classpath:spring-configurations/user-controller.xml" />
+	<import resource="classpath:spring-configurations/sparql-converters.xml" />
+	<import resource="classpath:spring-configurations/users.xml" />
+	<import resource="classpath:spring-configurations/logging.xml" />
+	<import resource="classpath:spring-configurations/internationalization-filter.xml" />
+	<import resource="classpath:spring-configurations/pipelines.xml" />
+	<import resource="classpath:spring-configurations/postprocessing.xml" />
 	
 	<import resource="classpath:spring-configurations/tilde-translation.xml" />
 	<import resource="classpath:spring-configurations/tilde-terminology.xml" />
