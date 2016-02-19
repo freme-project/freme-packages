@@ -23,49 +23,45 @@
 			<version>0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
+
+
+
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<dependencies>
-					<dependency>
-						<groupId>eu.freme.bservices</groupId>
-						<artifactId>package-maker</artifactId>
-						<version>0.1-SNAPSHOT</version>
-					</dependency>
-				</dependencies>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<layout>DIR</layout>
+					<mainClass>eu.freme.common.starter.FREMEStarter</mainClass>
+					<finalName>${project.artifactId}-${project.version}</finalName>
+					<outputDirectory>${project.build.directory}/freme-dist</outputDirectory>
+					<classifier>boot</classifier>
+				</configuration>
 				<executions>
 					<execution>
-						<id>freme-distribution</id>
-						<phase>package</phase>
 						<goals>
-							<goal>single</goal>
+							<goal>repackage</goal>
 						</goals>
-						<configuration>
-							<descriptorRefs>
-								<descriptorRef>freme-assembly</descriptorRef>
-							</descriptorRefs>
-							<finalName>freme-distribution</finalName>
-						</configuration>
 					</execution>
 				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.10</version>
 				<executions>
 					<execution>
-						<id>copy-dependencies</id>
-						<phase>prepare-package</phase>
+						<id>unpack-dependencies</id>
+						<phase>package</phase>
 						<goals>
-							<goal>copy-dependencies</goal>
+							<goal>unpack-dependencies</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>${project.build.directory}/lib</outputDirectory>
+							<outputDirectory>${project.build.directory}/freme-dist</outputDirectory>
 							<overWriteReleases>false</overWriteReleases>
-							<overWriteSnapshots>false</overWriteSnapshots>
-							<overWriteIfNewer>true</overWriteIfNewer>
+							<overWriteSnapshots>true</overWriteSnapshots>
+							<includeArtifactIds>package-maker</includeArtifactIds>
 						</configuration>
 					</execution>
 				</executions>
