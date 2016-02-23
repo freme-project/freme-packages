@@ -65,4 +65,12 @@
 			</plugin>
 		</plugins>
 	</build>
+	
+	<dependencies>
+		<dependency>
+			<groupId>eu.freme.bservices</groupId>
+			<artifactId>package-maker</artifactId>
+			<version>0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
 </project>
