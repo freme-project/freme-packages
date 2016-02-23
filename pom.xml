@@ -16,74 +16,53 @@
 		<module>broker-dev</module>
 	</modules>
 
-	<dependencies>
-		<dependency>
-			<groupId>eu.freme.bservices</groupId>
-			<artifactId>package-maker</artifactId>
-			<version>0.1-SNAPSHOT</version>
-		</dependency>
-	</dependencies>
-
-
-
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<layout>DIR</layout>
-					<mainClass>eu.freme.common.starter.FREMEStarter</mainClass>
-					<finalName>${project.artifactId}-${project.version}</finalName>
-					<outputDirectory>${project.build.directory}/freme-dist</outputDirectory>
-					<classifier>boot</classifier>
-				</configuration>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
 				<executions>
 					<execution>
+						<id>copy-dependencies</id>
+						<phase>prepare-package</phase>
 						<goals>
-							<goal>repackage</goal>
+							<goal>copy-dependencies</goal>
 						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/lib</outputDirectory>
+							<overWriteReleases>false</overWriteReleases>
+							<overWriteSnapshots>false</overWriteSnapshots>
+							<overWriteIfNewer>true</overWriteIfNewer>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<version>2.10</version>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<dependencies>
+					<dependency>
+						<groupId>eu.freme.bservices</groupId>
+						<artifactId>package-maker</artifactId>
+						<version>0.1-SNAPSHOT</version>
+					</dependency>
+				</dependencies>
 				<executions>
 					<execution>
-						<id>unpack-dependencies</id>
+						<id>freme-distribution</id>
 						<phase>package</phase>
 						<goals>
-							<goal>unpack-dependencies</goal>
+							<goal>single</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>${project.build.directory}/freme-dist</outputDirectory>
-							<overWriteReleases>false</overWriteReleases>
-							<overWriteSnapshots>true</overWriteSnapshots>
-							<includeArtifactIds>package-maker</includeArtifactIds>
+							<descriptorRefs>
+								<descriptorRef>freme-assembly</descriptorRef>
+							</descriptorRefs>
+							<finalName>freme-distribution</finalName>
 						</configuration>
 					</execution>
 				</executions>
 			</plugin>
 		</plugins>
 	</build>
-	<repositories>
-		<repository>
-			<id>freme-release</id>
-			<name>freme-nexus</name>
-			<url>http://rv1443.1blu.de/nexus/content/repositories/releases/</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-		<repository>
-			<id>freme-nexus</id>
-			<name>freme-nexus</name>
-			<url>http://rv1443.1blu.de/nexus/content/repositories/snapshots/</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-		</repository>
-	</repositories>
 </project>
