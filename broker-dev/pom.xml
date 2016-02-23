@@ -71,6 +71,11 @@
 			<artifactId>postprocessing</artifactId>
 			<version>0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>eu.freme.bservices.filters</groupId>
+			<artifactId>cors-filter</artifactId>
+			<version>0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>
