@@ -12,7 +12,7 @@
 	</parent>
 
 	<modules>
-		<module>broker-standalone</module>
+		<module>broker-local</module>
 		<module>broker-dev</module>
 	</modules>
 
