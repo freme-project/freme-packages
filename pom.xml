@@ -12,53 +12,82 @@
 	</parent>
 
 	<modules>
-		<module>broker-local</module>
 		<module>broker-dev</module>
 	</modules>
 
+
 	<build>
+		<!-- do not pack resources into jar -->
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<excludes>
+					<exclude>*</exclude>
+				</excludes>
+			</resource>
+		</resources>
+
+		<!-- create jar -->
 		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>eu.freme.common.starter.FREMEStarter</mainClass>
+					<layout>ZIP</layout>
+					<outputDirectory>${basedir}/target/freme-package/</outputDirectory>
+					<classifier>full</classifier>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- copy package resources in config folder -->
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copy-resources</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${basedir}/target/freme-package/config</outputDirectory>
+							<resources>
+								<resource>
+									<directory>src/main/resources</directory>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- unpack the package maker to add common files and folders like the 
+				start scripts -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
 				<executions>
 					<execution>
-						<id>copy-dependencies</id>
-						<phase>prepare-package</phase>
-						<goals>
-							<goal>copy-dependencies</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>${project.build.directory}/lib</outputDirectory>
-							<overWriteReleases>false</overWriteReleases>
-							<overWriteSnapshots>false</overWriteSnapshots>
-							<overWriteIfNewer>true</overWriteIfNewer>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<dependencies>
-					<dependency>
-						<groupId>eu.freme.bservices</groupId>
-						<artifactId>package-maker</artifactId>
-						<version>0.1-SNAPSHOT</version>
-					</dependency>
-				</dependencies>
-				<executions>
-					<execution>
-						<id>freme-distribution</id>
+						<id>unpack-sigar</id>
 						<phase>package</phase>
 						<goals>
-							<goal>single</goal>
+							<goal>unpack-dependencies</goal>
 						</goals>
 						<configuration>
-							<descriptorRefs>
-								<descriptorRef>freme-assembly</descriptorRef>
-							</descriptorRefs>
-							<finalName>freme-distribution</finalName>
+							<includeGroupIds>eu.freme.bservices</includeGroupIds>
+							<includeArtifactIds>package-maker</includeArtifactIds>
+							<outputDirectory>${basedir}/target/freme-package</outputDirectory>
+							<excludes>META-INF/</excludes>
 						</configuration>
 					</execution>
 				</executions>
@@ -73,4 +102,24 @@
 			<version>0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
+
+
+	<repositories>
+		<repository>
+			<id>freme-release</id>
+			<name>freme-nexus</name>
+			<url>http://rv1443.1blu.de/nexus/content/repositories/releases/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>freme-nexus</id>
+			<name>freme-nexus</name>
+			<url>http://rv1443.1blu.de/nexus/content/repositories/snapshots/</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</repository>
+	</repositories>
 </project>
