@@ -18,7 +18,7 @@
 
 	<build>
 		<!-- do not pack resources into jar -->
-		<resources>
+		<!-- <resources>
 			<resource>
 				<directory>src/main/resources</directory>
 				<filtering>true</filtering>
@@ -27,7 +27,7 @@
 				</excludes>
 			</resource>
 		</resources>
-
+ -->
 		<!-- create jar -->
 		<plugins>
 			<plugin>
