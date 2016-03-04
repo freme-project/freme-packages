@@ -17,19 +17,10 @@
 
 
 	<build>
-		<!-- do not pack resources into jar -->
-		<!-- <resources>
-			<resource>
-				<directory>src/main/resources</directory>
-				<filtering>true</filtering>
-				<excludes>
-					<exclude>*</exclude>
-				</excludes>
-			</resource>
-		</resources>
- -->
-		<!-- create jar -->
+
 		<plugins>
+		
+			<!-- create jar -->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -71,6 +62,18 @@
 				</executions>
 			</plugin>
 
+			<!-- exclude content of src/main/resources from jar because it will go 
+				to the config/ folder -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>*</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+
 			<!-- unpack the package maker to add common files and folders like the 
 				start scripts -->
 			<plugin>
@@ -102,7 +105,6 @@
 			<version>0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
-
 
 	<repositories>
 		<repository>
