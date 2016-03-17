@@ -13,6 +13,7 @@
 
 	<modules>
 		<module>broker-dev</module>
+		<module>freme-ner-dev</module>
 	</modules>
 
 
