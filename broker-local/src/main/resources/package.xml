@@ -15,6 +15,7 @@
 	<import resource="classpath:spring-configurations/pipelines.xml" />
 	<import resource="classpath:spring-configurations/postprocessing.xml" />
 	<import resource="classpath:spring-configurations/cors-filter.xml" />
+	<import resource="classpath:spring-configurations/proxy-filter.xml" />
 	
 	<import resource="classpath:spring-configurations/tilde-translation.xml" />
 	<import resource="classpath:spring-configurations/tilde-terminology.xml" />
