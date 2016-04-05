@@ -10,14 +10,9 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>eu.freme.bservices</groupId>
-			<artifactId>user-controller</artifactId>
-			<version>0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
 			<groupId>eu.freme.e-services</groupId>
 			<artifactId>tilde-services</artifactId>
-			<version>0.1-SNAPSHOT</version>
+			<version>0.2-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>eu.freme.bservices</groupId>
@@ -60,19 +55,24 @@
 			<version>0.2-SNAPSHOT</version>
 		</dependency>
 		<dependency>
+			<groupId>eu.freme.bservices.filters</groupId>
+			<artifactId>proxy-filter</artifactId>
+			<version>0.2-SNAPSHOT</version>
+		</dependency>
+		<dependency>
 			<groupId>eu.freme.e-services</groupId>
 			<artifactId>publishing</artifactId>
-			<version>0.1-SNAPSHOT</version>
+			<version>0.2-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>eu.freme.e-services</groupId>
 			<artifactId>e-link</artifactId>
-			<version>0.1-SNAPSHOT</version>
+			<version>0.2-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>eu.freme.e-services</groupId>
 			<artifactId>dbpedia-spotlight</artifactId>
-			<version>0.1-SNAPSHOT</version>
+			<version>0.2-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 
