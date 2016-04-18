@@ -14,6 +14,11 @@
 			<groupId>eu.freme</groupId>
 			<version>0.6-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>eu.freme.bservices.filters</groupId>
+			<artifactId>logging</artifactId>
+			<version>0.2-SNAPSHOT</version>
+		</dependency>
         <dependency>
             <groupId>org.apache.solr</groupId>
             <artifactId>solr-solrj</artifactId>
