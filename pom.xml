@@ -17,87 +17,95 @@
 	</modules>
 
 
-	<build>
+	<profiles>
+		<profile>
+			<id>full-assembly</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<build>
+				<plugins>
 
-		<plugins>
-		
-			<!-- create jar -->
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<mainClass>eu.freme.common.starter.FREMEStarter</mainClass>
-					<layout>ZIP</layout>
-					<outputDirectory>${basedir}/target/freme-package/</outputDirectory>
-					<classifier>full</classifier>
-				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>repackage</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-
-			<!-- copy package resources in config folder -->
-			<plugin>
-				<artifactId>maven-resources-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>copy-resources</id>
-						<phase>validate</phase>
-						<goals>
-							<goal>copy-resources</goal>
-						</goals>
+					<!-- create jar -->
+					<plugin>
+						<groupId>org.springframework.boot</groupId>
+						<artifactId>spring-boot-maven-plugin</artifactId>
 						<configuration>
-							<outputDirectory>${basedir}/target/freme-package/config</outputDirectory>
-							<resources>
-								<resource>
-									<directory>src/main/resources</directory>
-									<filtering>true</filtering>
-								</resource>
-							</resources>
+							<mainClass>eu.freme.common.starter.FREMEStarter</mainClass>
+							<layout>ZIP</layout>
+							<outputDirectory>${basedir}/target/freme-package/</outputDirectory>
+							<classifier>full</classifier>
 						</configuration>
-					</execution>
-				</executions>
-			</plugin>
+						<executions>
+							<execution>
+								<goals>
+									<goal>repackage</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
 
-			<!-- exclude content of src/main/resources from jar because it will go 
-				to the config/ folder -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<configuration>
-					<excludes>
-						<exclude>*</exclude>
-					</excludes>
-				</configuration>
-			</plugin>
+					<!-- copy package resources in config folder -->
+					<plugin>
+						<artifactId>maven-resources-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>copy-resources</id>
+								<phase>validate</phase>
+								<goals>
+									<goal>copy-resources</goal>
+								</goals>
+								<configuration>
+									<outputDirectory>${basedir}/target/freme-package/config</outputDirectory>
+									<resources>
+										<resource>
+											<directory>src/main/resources</directory>
+											<filtering>true</filtering>
+										</resource>
+									</resources>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
 
-			<!-- unpack the package maker to add common files and folders like the 
-				start scripts -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>unpack-sigar</id>
-						<phase>package</phase>
-						<goals>
-							<goal>unpack-dependencies</goal>
-						</goals>
+					<!-- exclude content of src/main/resources from jar because it will go
+                        to the config/ folder -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-jar-plugin</artifactId>
 						<configuration>
-							<includeGroupIds>eu.freme.bservices</includeGroupIds>
-							<includeArtifactIds>package-maker</includeArtifactIds>
-							<outputDirectory>${basedir}/target/freme-package</outputDirectory>
-							<excludes>META-INF/</excludes>
+							<excludes>
+								<exclude>*</exclude>
+							</excludes>
 						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
+					</plugin>
+
+					<!-- unpack the package maker to add common files and folders like the
+                        start scripts -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-dependency-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>unpack-sigar</id>
+								<phase>package</phase>
+								<goals>
+									<goal>unpack-dependencies</goal>
+								</goals>
+								<configuration>
+									<includeGroupIds>eu.freme.bservices</includeGroupIds>
+									<includeArtifactIds>package-maker</includeArtifactIds>
+									<outputDirectory>${basedir}/target/freme-package</outputDirectory>
+									<excludes>META-INF/</excludes>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
 	
 	<dependencies>
 		<dependency>
