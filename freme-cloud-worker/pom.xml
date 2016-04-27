@@ -4,9 +4,10 @@
 	<parent>
 		<groupId>eu.freme.packages</groupId>
 		<artifactId>package-parent</artifactId>
-		<version>0.2-SNAPSHOT</version>
+		<version>0.3-SNAPSHOT</version>
 	</parent>
 	<artifactId>freme-cloud-worker</artifactId>
+	<version>0.2-SNAPSHOT</version>
 
 	<dependencies>
 		<dependency>
