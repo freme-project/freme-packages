@@ -7,7 +7,7 @@
 		<version>0.2</version>
 	</parent>
 	<artifactId>broker-dev</artifactId>
-        <version>0.7-SNAPSHOT</version>
+	<version>0.7-SNAPSHOT</version>
 	<dependencies>
 		<dependency>
 			<groupId>eu.freme.e-services</groupId>
