@@ -10,4 +10,5 @@
 	<import resource="classpath:spring-configurations/freme-common.xml" />
 	<import resource="classpath:spring-configurations/freme-ner.xml" />
 	<import resource="classpath:spring-configurations/logging.xml" />
+	<import resource="classpath:spring-configurations/internationalization-filter.xml" />
 </beans>
