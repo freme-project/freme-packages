@@ -7,12 +7,12 @@
 		<version>0.2</version>
 	</parent>
 	<artifactId>freme-ner-dev</artifactId>
-	<version>0.3-SNAPSHOT</version>
+	<version>0.21</version>
 	<dependencies>
 		<dependency>
 			<artifactId>freme-ner</artifactId>
 			<groupId>eu.freme</groupId>
-			<version>0.7-SNAPSHOT</version>
+			<version>0.6</version>
 		</dependency>
 		<dependency>
 			<groupId>eu.freme.bservices.filters</groupId>
