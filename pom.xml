@@ -10,6 +10,14 @@
 		<artifactId>freme-parent</artifactId>
 		<version>0.2</version>
 	</parent>
+	
+	<modules>
+		<module>broker-dev</module>
+		<module>broker-local</module>
+		<module>freme-cloud-broker</module>
+		<module>freme-cloud-worker</module>
+		<module>freme-ner-dev</module>
+	</modules>
 
 	<build>
 
