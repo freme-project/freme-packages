@@ -17,6 +17,7 @@
 		<module>freme-cloud-broker</module>
 		<module>freme-cloud-worker</module>
 		<module>freme-ner-dev</module>
+		<module>freme-full</module>
 	</modules>
 
 	<build>
