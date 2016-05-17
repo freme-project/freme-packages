@@ -26,4 +26,5 @@
 	<import resource="classpath:spring-configurations/e-link.xml" />
 	<import resource="classpath:spring-configurations/e-publishing.xml" />
 	<import resource="classpath:spring-configurations/dbpedia-spotlight.xml" />
+	<import resource="classpath:spring-configurations/freme-ner.xml" />
 </beans>
