@@ -9,7 +9,8 @@
 
 	<import resource="classpath:spring-configurations/freme-common.xml" />
 	<import resource="classpath:spring-configurations/eureka-client.xml" />
-	<import resource="classpath:spring-configurations/e-capitalization.xml" />
+	<import resource="classpath:spring-configurations/eopennlp.xml" />
+
 
 	<!-- basic services -->
 	

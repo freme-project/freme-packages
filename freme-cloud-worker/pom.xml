@@ -95,6 +95,17 @@
 			<artifactId>eureka-client</artifactId>
 			<version>0.1-SNAPSHOT</version>
 		</dependency>
+				<dependency>
+			<groupId>de.dkt</groupId>
+			<artifactId>e-NLP</artifactId>
+			<version>0.2-SNAPSHOT</version>
+			<exclusions>
+				<exclusion>
+					<groupId>ch.qos.logback</groupId>
+					<artifactId>logback-classic</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
 	</dependencies>
 
 	<repositories>
@@ -114,6 +125,33 @@
 				<enabled>false</enabled>
 			</releases>
 		</repository>
-	</repositories>
+		<repository>
+			<id>releases</id>
+			<url>http://v35731.1blu.de:8081/nexus/content/repositories/releases</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>snapshots</id>
+			<url>http://v35731.1blu.de:8081/nexus/content/repositories/snapshots</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositoriesld>
+  <plugins>
+   <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-resources-plugin</artifactId>
+    <configuration>
+     <nonFilteredFileExtensions>
+      <nonFilteredFileExtension>bin</nonFilteredFileExtension>
+      <nonFilteredFileExtension>ext</nonFilteredFileExtension>
+     </nonFilteredFileExtensions>
+    </configuration>
+   </plugin>
+  </plugins>
+ </build>>
 
 </project>
