@@ -12,7 +12,7 @@
 		<dependency>
 			<groupId>eu.freme.e-services</groupId>
 			<artifactId>tilde-services</artifactId>
-			<version>0.3</version>
+			<version>0.4-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>eu.freme.bservices.controllers</groupId>
@@ -42,7 +42,7 @@
 		<dependency>
 			<groupId>eu.freme.bservices.controllers</groupId>
 			<artifactId>pipelines</artifactId>
-			<version>0.2</version>
+			<version>0.3-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>eu.freme.bservices.filters</groupId>
@@ -67,12 +67,12 @@
 		<dependency>
 			<groupId>eu.freme.e-services</groupId>
 			<artifactId>e-link</artifactId>
-			<version>0.3</version>
+			<version>0.4-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>eu.freme.e-services</groupId>
 			<artifactId>dbpedia-spotlight</artifactId>
-			<version>0.2</version>
+			<version>0.4-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 
