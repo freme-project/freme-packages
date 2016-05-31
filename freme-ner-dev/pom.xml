@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>eu.freme.packages</groupId>
 		<artifactId>package-parent</artifactId>
-		<version>0.2</version>
+		<version>0.3-SNAPSHOT</version>
 	</parent>
 	<artifactId>freme-ner-dev</artifactId>
 	<version>0.3-SNAPSHOT</version>
@@ -17,17 +17,12 @@
 		<dependency>
 			<groupId>eu.freme.bservices.filters</groupId>
 			<artifactId>logging</artifactId>
-			<version>0.2</version>
+			<version>0.3-SNAPSHOT</version>
 		</dependency>
-		<!--<dependency>
-			<groupId>eu.freme.bservices</groupId>
-			<artifactId>internationalization</artifactId>
-			<version>0.2</version>
-		</dependency>-->
 		<dependency>
 			<groupId>eu.freme.bservices.filters</groupId>
 			<artifactId>internationalization-filter</artifactId>
-			<version>0.3-SNAPSHOT</version>
+			<version>0.4-SNAPSHOT</version>
 		</dependency>
         <dependency>
             <groupId>org.apache.solr</groupId>
