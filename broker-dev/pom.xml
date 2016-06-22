@@ -14,11 +14,11 @@
 			<artifactId>tilde-services</artifactId>
 			<version>0.4-SNAPSHOT</version>
 		</dependency>
-		<dependency>
+		<!--<dependency> // imported by postprocessing filter
 			<groupId>eu.freme.bservices.controllers</groupId>
 			<artifactId>sparql-converters</artifactId>
 			<version>0.2</version>
-		</dependency>
+		</dependency>-->
 		<dependency>
 			<groupId>eu.freme.bservices.controllers</groupId>
 			<artifactId>users</artifactId>
