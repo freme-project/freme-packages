@@ -10,6 +10,7 @@
 	
 	<artifactId>broker-dev</artifactId>
 	<version>0.8-SNAPSHOT</version>
+	
 	<dependencies>
 		<dependency>
 			<groupId>eu.freme.e-services</groupId>

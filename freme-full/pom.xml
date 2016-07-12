@@ -1,10 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+  
   <parent>
     <groupId>eu.freme.packages</groupId>
     <artifactId>package-parent</artifactId>
     <version>0.3-SNAPSHOT</version>
   </parent>
+  
   <artifactId>freme-full</artifactId>
   <version>0.1-SNAPSHOT</version>
  
@@ -12,77 +14,62 @@
 		<dependency>
 			<groupId>eu.freme.e-services</groupId>
 			<artifactId>tilde-services</artifactId>
-			<version>0.2</version>
 		</dependency>
 		<dependency>
 			<groupId>eu.freme.bservices.controllers</groupId>
 			<artifactId>sparql-converters</artifactId>
-			<version>0.2</version>
 		</dependency>
 		<dependency>
 			<groupId>eu.freme.bservices.controllers</groupId>
 			<artifactId>users</artifactId>
-			<version>0.2</version>
 		</dependency>
 		<dependency>
 			<groupId>eu.freme.bservices.controllers</groupId>
 			<artifactId>nif-converter</artifactId>
-			<version>0.2</version>
 		</dependency>
 		<dependency>
 			<groupId>eu.freme.bservices.filters</groupId>
 			<artifactId>internationalization-filter</artifactId>
-			<version>0.3-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>eu.freme.bservices.filters</groupId>
 			<artifactId>logging</artifactId>
-			<version>0.2</version>
 		</dependency>
 		<dependency>
 			<groupId>eu.freme.bservices.controllers</groupId>
 			<artifactId>pipelines</artifactId>
-			<version>0.2</version>
 		</dependency>
 		<dependency>
 			<groupId>eu.freme.bservices.filters</groupId>
 			<artifactId>postprocessing</artifactId>
-			<version>0.2</version>
 		</dependency>
 		<dependency>
 			<groupId>eu.freme.bservices.filters</groupId>
 			<artifactId>cors-filter</artifactId>
-			<version>0.2</version>
 		</dependency>
 		<dependency>
 			<groupId>eu.freme.bservices.filters</groupId>
 			<artifactId>proxy-filter</artifactId>
-			<version>0.2</version>
 		</dependency>
 		<dependency>
 			<groupId>eu.freme.e-services</groupId>
 			<artifactId>publishing</artifactId>
-			<version>0.2</version>
 		</dependency>
 		<dependency>
 			<groupId>eu.freme.e-services</groupId>
 			<artifactId>e-link</artifactId>
-			<version>0.3-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>eu.freme.e-services</groupId>
 			<artifactId>dbpedia-spotlight</artifactId>
-			<version>0.2</version>
 		</dependency>
         <dependency>
             <groupId>org.apache.solr</groupId>
             <artifactId>solr-solrj</artifactId>
-            <version>5.2.1</version>
         </dependency>
 		<dependency>
 			<artifactId>freme-ner</artifactId>
-			<groupId>eu.freme</groupId>
-			<version>0.6</version>
+			<groupId>eu.freme.e-services</groupId>
 		</dependency>
 	</dependencies>
 	<repositories>
