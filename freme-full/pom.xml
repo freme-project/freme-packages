@@ -4,11 +4,10 @@
   <parent>
     <groupId>eu.freme.packages</groupId>
     <artifactId>package-parent</artifactId>
-    <version>0.3-SNAPSHOT</version>
+    <version>0.8</version>
   </parent>
   
   <artifactId>freme-full</artifactId>
-  <version>0.1-SNAPSHOT</version>
  
   <dependencies>
 		<dependency>

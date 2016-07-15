@@ -19,7 +19,6 @@
 	<import resource="classpath:spring-configurations/cors-filter.xml" />
 	<import resource="classpath:spring-configurations/proxy-filter.xml" />
 	<import resource="classpath:spring-configurations/nif-converter.xml" />
-	<import resource="classpath:spring-configurations/xslt-converter.xml" />
 	
 	<!-- e-services -->
 	<import resource="classpath:spring-configurations/tilde-translation.xml" />
