@@ -5,11 +5,10 @@
 	<parent>
 		<groupId>eu.freme.packages</groupId>
 		<artifactId>package-parent</artifactId>
-		<version>0.3-SNAPSHOT</version>
+		<version>0.8</version>
 	</parent>
 	
 	<artifactId>broker-dev</artifactId>
-	<version>0.8-SNAPSHOT</version>
 	
 	<dependencies>
 		<dependency>
@@ -59,10 +58,6 @@
 		<dependency>
 			<groupId>eu.freme.e-services</groupId>
 			<artifactId>dbpedia-spotlight</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>eu.freme.bservices.controllers</groupId>
-			<artifactId>xslt-converter</artifactId>
 		</dependency>
 	</dependencies>
 
