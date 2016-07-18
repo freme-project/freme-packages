@@ -62,7 +62,6 @@
 		<dependency>
 			<groupId>eu.freme.bservices.controllers</groupId>
 			<artifactId>xslt-converter</artifactId>
-			<version>0.1-SNAPSHOT</version>
 		</dependency>
 
 	</dependencies>
