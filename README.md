@@ -1,6 +1,6 @@
 # freme-packages
 
-This repository holds runnable packages of FREME, see [FREME packages](http://api.freme-project.eu/doc/current/knowledge-base/freme-for-sysadmins/freme-packages.html).
+This repository holds runnable packages of FREME, see [FREME packages](http://api.freme-project.eu/doc/current/knowledge-base/freme-for-sysadmins/freme-packages.html) and the [Overview of the FREME Architecture](http://api.freme-project.eu/doc/current/knowledge-base/freme-for-developers/overview-of-the-freme-architecture.html).
 
 It is part of the [FREME Project](http://www.freme-project.eu/) which resides on [GitHub](https://github.com/freme-project).
 
