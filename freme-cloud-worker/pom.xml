@@ -7,83 +7,12 @@
 		<version>0.9-SNAPSHOT</version>
 	</parent>
 	<artifactId>freme-cloud-worker</artifactId>
+	
+	<properties>
+		<docker.image.prefix>springio</docker.image.prefix>
+	</properties>
 
 	<dependencies>
-		<dependency>
-			<groupId>eu.freme.e-services</groupId>
-			<artifactId>tilde-services</artifactId>
-			<version>0.2-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>eu.freme.bservices</groupId>
-			<artifactId>internationalization</artifactId>
-			<version>0.2-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>eu.freme.bservices.controllers</groupId>
-			<artifactId>sparql-converters</artifactId>
-			<version>0.2-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>eu.freme.bservices.controllers</groupId>
-			<artifactId>users</artifactId>
-			<version>0.2-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>eu.freme.bservices.filters</groupId>
-			<artifactId>internationalization-filter</artifactId>
-			<version>0.2-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>eu.freme.bservices.filters</groupId>
-			<artifactId>logging</artifactId>
-			<version>0.2-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>eu.freme.bservices.controllers</groupId>
-			<artifactId>pipelines</artifactId>
-			<version>0.2-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>eu.freme.bservices.filters</groupId>
-			<artifactId>postprocessing</artifactId>
-			<version>0.2-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>eu.freme.bservices.filters</groupId>
-			<artifactId>cors-filter</artifactId>
-			<version>0.2-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>eu.freme.bservices.filters</groupId>
-			<artifactId>proxy-filter</artifactId>
-			<version>0.2-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>eu.freme.e-services</groupId>
-			<artifactId>publishing</artifactId>
-			<version>0.2-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>eu.freme.e-services</groupId>
-			<artifactId>e-link</artifactId>
-			<version>0.2-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>eu.freme.e-services</groupId>
-			<artifactId>dbpedia-spotlight</artifactId>
-			<version>0.2-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>eu.freme.bservices.cloud</groupId>
-			<artifactId>eureka-server</artifactId>
-			<version>0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>eu.freme.bservices.cloud</groupId>
-			<artifactId>load-balancer</artifactId>
-			<version>0.1-SNAPSHOT</version>
-		</dependency>
 		<dependency>
 			<groupId>eu.freme.e-services</groupId>
 			<artifactId>e-capitalization</artifactId>
@@ -93,17 +22,6 @@
 			<groupId>eu.freme.bservices.cloud</groupId>
 			<artifactId>eureka-client</artifactId>
 			<version>0.1-SNAPSHOT</version>
-		</dependency>
-				<dependency>
-			<groupId>de.dkt</groupId>
-			<artifactId>e-NLP</artifactId>
-			<version>0.2-SNAPSHOT</version>
-			<exclusions>
-				<exclusion>
-					<groupId>ch.qos.logback</groupId>
-					<artifactId>logback-classic</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 	</dependencies>
 
@@ -139,21 +57,40 @@
 			</snapshots>
 		</repository>
 	</repositories>
+        <build>
+                <plugins>
+                        <plugin>
+                                <groupId>org.apache.maven.plugins</groupId>
+                                <artifactId>maven-jar-plugin</artifactId>
+                                <configuration  combine.self="override"></configuration>
+                        </plugin>
+                        <plugin>
+                                <groupId>com.spotify</groupId>
+                                <artifactId>docker-maven-plugin</artifactId>
+                                <version>0.4.11</version>
+                                <configuration>
+                                        <imageName>nordpolemil/freme-cloud-worker</imageName>
+                                        <dockerDirectory>src/main/docker</dockerDirectory>
+                                        <resources>
+                                                <resource>
+                                                        <targetPath>/</targetPath>
+                                                        <directory>${project.build.directory}/freme-package/</directory>
+                                                        <include>app-full.jar</include>
+                                                        <include>config/application.properties</include>
 
-<build>
-  <plugins>
-   <plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-resources-plugin</artifactId>
-    <configuration>
-     <nonFilteredFileExtensions>
-      <nonFilteredFileExtension>bin</nonFilteredFileExtension>
-      <nonFilteredFileExtension>ext</nonFilteredFileExtension>
-     </nonFilteredFileExtensions>
-    </configuration>
-   </plugin>
-  </plugins>
- </build>
+                                                </resource>
+                                        </resources>
+                                </configuration>
+                        </plugin>
 
-
+                        <plugin>
+                                <groupId>org.springframework.boot</groupId>
+                                <artifactId>spring-boot-maven-plugin</artifactId>
+                                <configuration>
+                                        <finalName>app</finalName>
+                                </configuration>
+                        </plugin>
+                </plugins>
+        </build>
 </project>
+

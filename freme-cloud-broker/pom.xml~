@@ -20,6 +20,11 @@
 			<version>0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
+			<groupId>eu.freme.e-services</groupId>
+			<artifactId>e-capitalization</artifactId>
+			<version>0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
 			<groupId>eu.freme.bservices.cloud</groupId>
 			<artifactId>eureka-client</artifactId>
 			<version>0.1-SNAPSHOT</version>
@@ -49,6 +54,8 @@
 
 	<build>
 		<plugins>		
+			
+	
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
@@ -60,13 +67,14 @@
 				<version>0.4.11</version>
 				<configuration>
 					<imageName>nordpolemil/freme-cloud-broker</imageName>
+<!--<imageName>${docker.image.prefix}/${project.artifactId}</imageName>-->
 					<dockerDirectory>src/main/docker</dockerDirectory>
 					<resources>
 						<resource>
 							<targetPath>/</targetPath>
-							<directory>${project.build.directory}/freme-package/</directory>
-							<include>app-full.jar</include>
-							<include>config/application.properties</include>
+							<directory>${project.build.directory}</directory>
+							<include>freme-package/${project.build.finalName}.jar</include>
+							<include>freme-package/app-full.jar</include>
 
 						</resource>
 					</resources>

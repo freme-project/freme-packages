@@ -10,8 +10,7 @@ server.session-timeout=60
 
 spring.application.name=freme-ner
 server.port=8080
-eureka.serviceUrl.default=http://172.17.0.2:8761/eureka/
-eureka.client.serviceUrl.defaultZone=http://172.17.0.2:8761/eureka/
+eureka.serviceUrl.default=http://localhost:8761/eureka
 
 eureka.client.registerWithEureka=true
 eureka.client.fetchRegistry=true
@@ -23,6 +22,4 @@ security.basic-enabled: false
 
 spring.profiles=cloud
 
-eureka.instance.preferIpAddress=true
-#spring.cloud.client.ipAddress=${IPADDRESS}
 #eureka.instance.hostname=localhost
