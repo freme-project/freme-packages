@@ -54,8 +54,31 @@
 
 	<build>
 		<plugins>		
+	<!--		
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>3.0.1</version>
+        <executions>
+          <execution>
+            <id>copy-resources</id>
+            <phase>validate</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${basedir}/target/</outputDirectory>
+              <resources>          
+                <resource>
+                  <directory>${basedir}/target/freme-package/app-full.jar</directory>
+                  <filtering>true</filtering>
+                </resource>
+              </resources>              
+            </configuration>            
+          </execution>
+        </executions>
+      </plugin>
+-->
 			
-	
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
@@ -72,9 +95,9 @@
 					<resources>
 						<resource>
 							<targetPath>/</targetPath>
-							<directory>${project.build.directory}</directory>
-							<include>freme-package/${project.build.finalName}.jar</include>
+							<directory>${project.build.directory}/freme-package/</directory>
 							<include>app-full.jar</include>
+							<include>config/application.properties</include>
 
 						</resource>
 					</resources>
