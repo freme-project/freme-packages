@@ -57,6 +57,10 @@
 			<groupId>eu.freme.e-services</groupId>
 			<artifactId>dbpedia-spotlight</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>eu.freme.bservices.controllers</groupId>
+			<artifactId>xslt-converter</artifactId>
+		</dependency>
 	</dependencies>
 	<repositories>
 		<repository>
