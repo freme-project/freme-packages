@@ -7,7 +7,7 @@
 		<version>0.9-SNAPSHOT</version>
 	</parent>
 	<artifactId>freme-cloud-worker</artifactId>
-	
+
 	<properties>
 		<docker.image.prefix>springio</docker.image.prefix>
 	</properties>
@@ -22,6 +22,17 @@
 			<groupId>eu.freme.bservices.cloud</groupId>
 			<artifactId>eureka-client</artifactId>
 			<version>0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>de.dkt</groupId>
+			<artifactId>e-NLP</artifactId>
+			<version>0.2</version>
+			<exclusions>
+				<exclusion>
+					<groupId>ch.qos.logback</groupId>
+					<artifactId>logback-classic</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 	</dependencies>
 
@@ -57,40 +68,52 @@
 			</snapshots>
 		</repository>
 	</repositories>
-        <build>
-                <plugins>
-                        <plugin>
-                                <groupId>org.apache.maven.plugins</groupId>
-                                <artifactId>maven-jar-plugin</artifactId>
-                                <configuration  combine.self="override"></configuration>
-                        </plugin>
-                        <plugin>
-                                <groupId>com.spotify</groupId>
-                                <artifactId>docker-maven-plugin</artifactId>
-                                <version>0.4.11</version>
-                                <configuration>
-                                        <imageName>nordpolemil/freme-cloud-worker</imageName>
-                                        <dockerDirectory>src/main/docker</dockerDirectory>
-                                        <resources>
-                                                <resource>
-                                                        <targetPath>/</targetPath>
-                                                        <directory>${project.build.directory}/freme-package/</directory>
-                                                        <include>app-full.jar</include>
-                                                        <include>config/application.properties</include>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration combine.self="override"></configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>0.4.11</version>
+				<configuration>
+					<imageName>nordpolemil/freme-cloud-worker</imageName>
+					<dockerDirectory>src/main/docker</dockerDirectory>
+					<resources>
+						<resource>
+							<targetPath>/</targetPath>
+							<directory>${project.build.directory}/freme-package/</directory>
+							<include>app-full.jar</include>
+							<include>config/application.properties</include>
 
-                                                </resource>
-                                        </resources>
-                                </configuration>
-                        </plugin>
+						</resource>
+					</resources>
+				</configuration>
+			</plugin>
 
-                        <plugin>
-                                <groupId>org.springframework.boot</groupId>
-                                <artifactId>spring-boot-maven-plugin</artifactId>
-                                <configuration>
-                                        <finalName>app</finalName>
-                                </configuration>
-                        </plugin>
-                </plugins>
-        </build>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<finalName>app</finalName>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<configuration>
+					<nonFilteredFileExtensions>
+						<nonFilteredFileExtension>bin</nonFilteredFileExtension>
+						<nonFilteredFileExtension>ext</nonFilteredFileExtension>
+					</nonFilteredFileExtensions>
+				</configuration>
+			</plugin>
+		</plugins>
+
+	</build>
 </project>
 
