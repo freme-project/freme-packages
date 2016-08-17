@@ -1,15 +1,16 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  
-  <parent>
-    <groupId>eu.freme.packages</groupId>
-    <artifactId>package-parent</artifactId>
-    <version>0.9-SNAPSHOT</version>
-  </parent>
-  
-  <artifactId>freme-full</artifactId>
- 
-  <dependencies>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>eu.freme.packages</groupId>
+		<artifactId>package-parent</artifactId>
+		<version>0.9-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>freme-full</artifactId>
+
+	<dependencies>
 		<dependency>
 			<groupId>eu.freme.e-services</groupId>
 			<artifactId>tilde-services</artifactId>
@@ -63,17 +64,21 @@
 			<artifactId>dbpedia-spotlight</artifactId>
 		</dependency>
 		<dependency>
-	            <groupId>org.apache.solr</groupId>
-	            <artifactId>solr-solrj</artifactId>
-	            <version>5.2.1</version>
-	        </dependency>
-        <dependency>
-            <groupId>org.apache.solr</groupId>
-            <artifactId>solr-solrj</artifactId>
-        </dependency>
+			<groupId>org.apache.solr</groupId>
+			<artifactId>solr-solrj</artifactId>
+			<version>5.2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.solr</groupId>
+			<artifactId>solr-solrj</artifactId>
+		</dependency>
 		<dependency>
 			<artifactId>freme-ner</artifactId>
 			<groupId>eu.freme.e-services</groupId>
+		</dependency>
+		<dependency>
+			<groupId>eu.freme.bservices.filters</groupId>
+			<artifactId>urlsupport-filter</artifactId>
 		</dependency>
 	</dependencies>
 	<repositories>
@@ -93,5 +98,5 @@
 				<enabled>false</enabled>
 			</releases>
 		</repository>
-	</repositories> 
+	</repositories>
 </project>
