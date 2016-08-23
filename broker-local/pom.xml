@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>eu.freme.packages</groupId>
 		<artifactId>package-parent</artifactId>
-		<version>0.9-SNAPSHOT</version>
+		<version>0.9</version>
 	</parent>
 	<artifactId>broker-local</artifactId>
 
