@@ -11,4 +11,7 @@
 	<import resource="classpath:spring-configurations/freme-ner.xml" />
 	<import resource="classpath:spring-configurations/logging.xml" />
 	<import resource="classpath:spring-configurations/internationalization-filter.xml" />
+	<import resource="classpath:spring-configurations/urlsupport-filter.xml" />
+		<import resource="classpath:spring-configurations/xslt-converter.xml" />
+	
 </beans>

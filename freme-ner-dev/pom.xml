@@ -20,6 +20,14 @@
 			<groupId>eu.freme.bservices.filters</groupId>
 			<artifactId>internationalization-filter</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>eu.freme.bservices.filters</groupId>
+			<artifactId>urlsupport-filter</artifactId>
+		</dependency>
+		<dependency>
+		 	<groupId>eu.freme.bservices.controllers</groupId>
+    		<artifactId>xslt-converter</artifactId>
+		</dependency>
         <dependency>
             <groupId>org.apache.solr</groupId>
             <artifactId>solr-solrj</artifactId>
