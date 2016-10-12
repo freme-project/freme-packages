@@ -15,7 +15,6 @@
 		<module>broker-local</module>
 		<module>freme-ner-dev</module>
 		<module>freme-full</module>
-		<module>freme-cloud-config-eureka</module>
 	</modules>
 
 	<build>
