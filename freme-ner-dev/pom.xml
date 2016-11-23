@@ -4,14 +4,13 @@
 	<parent>
 		<groupId>eu.freme.packages</groupId>
 		<artifactId>package-parent</artifactId>
-		<version>0.12-SNAPSHOT</version>
+		<version>0.12</version>
 	</parent>
 	<artifactId>freme-ner-dev</artifactId>
 	<dependencies>
 		<dependency>
 			<artifactId>freme-ner</artifactId>
 			<groupId>eu.freme.e-services</groupId>
-			<version>0.12-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>eu.freme.bservices.filters</groupId>
