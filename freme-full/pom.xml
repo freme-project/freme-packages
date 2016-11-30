@@ -10,6 +10,17 @@
 
 	<artifactId>freme-full</artifactId>
 
+	
+	<developers>
+		<developer>
+			<name>Jan Nehring</name>
+			<email>jan.nehring@dfki.de</email>
+			<organization>DFKI</organization>
+			<organizationUrl>http://www.dfki.de</organizationUrl>
+		</developer>
+	</developers>
+
+
 	<dependencies>
 		<dependency>
 			<groupId>eu.freme.e-services</groupId>
