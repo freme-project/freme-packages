@@ -7,6 +7,16 @@
 		<version>0.13-SNAPSHOT</version>
 	</parent>
 	<artifactId>freme-ner-dev</artifactId>
+	
+	<developers>
+		<developer>
+			<name>Jan Nehring</name>
+			<email>jan.nehring@dfki.de</email>
+			<organization>DFKI</organization>
+			<organizationUrl>http://www.dfki.de</organizationUrl>
+		</developer>
+	</developers>
+	
 	<dependencies>
 		<dependency>
 			<artifactId>freme-ner</artifactId>
