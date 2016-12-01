@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>eu.freme.packages</groupId>
+		<groupId>eu.freme-project.packages</groupId>
 		<artifactId>package-parent</artifactId>
 		<version>0.13-SNAPSHOT</version>
 	</parent>
@@ -20,23 +20,23 @@
 	<dependencies>
 		<dependency>
 			<artifactId>freme-ner</artifactId>
-			<groupId>eu.freme.e-services</groupId>
+			<groupId>eu.freme-project.e-services</groupId>
 			<version>0.13-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>eu.freme.bservices.filters</groupId>
+			<groupId>eu.freme-project.bservices.filters</groupId>
 			<artifactId>logging</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>eu.freme.bservices.filters</groupId>
+			<groupId>eu.freme-project.bservices.filters</groupId>
 			<artifactId>internationalization-filter</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>eu.freme.bservices.filters</groupId>
+			<groupId>eu.freme-project.bservices.filters</groupId>
 			<artifactId>urlsupport-filter</artifactId>
 		</dependency>
 		<dependency>
-		 	<groupId>eu.freme.bservices.controllers</groupId>
+		 	<groupId>eu.freme-project.bservices.controllers</groupId>
     		<artifactId>xslt-converter</artifactId>
 		</dependency>
         <dependency>

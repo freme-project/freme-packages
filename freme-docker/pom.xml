@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>eu.freme.packages</groupId>
+		<groupId>eu.freme-project.packages</groupId>
 		<artifactId>package-parent</artifactId>
 		<version>0.12</version>
 	</parent>
@@ -12,55 +12,55 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>eu.freme.e-services</groupId>
+			<groupId>eu.freme-project.e-services</groupId>
 			<artifactId>tilde-services</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>eu.freme.bservices.controllers</groupId>
+			<groupId>eu.freme-project.bservices.controllers</groupId>
 			<artifactId>sparql-converters</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>eu.freme.bservices.controllers</groupId>
+			<groupId>eu.freme-project.bservices.controllers</groupId>
 			<artifactId>users</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>eu.freme.bservices.controllers</groupId>
+			<groupId>eu.freme-project.bservices.controllers</groupId>
 			<artifactId>nif-converter</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>eu.freme.bservices.filters</groupId>
+			<groupId>eu.freme-project.bservices.filters</groupId>
 			<artifactId>internationalization-filter</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>eu.freme.bservices.filters</groupId>
+			<groupId>eu.freme-project.bservices.filters</groupId>
 			<artifactId>logging</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>eu.freme.bservices.controllers</groupId>
+			<groupId>eu.freme-project.bservices.controllers</groupId>
 			<artifactId>pipelines</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>eu.freme.bservices.filters</groupId>
+			<groupId>eu.freme-project.bservices.filters</groupId>
 			<artifactId>postprocessing</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>eu.freme.bservices.filters</groupId>
+			<groupId>eu.freme-project.bservices.filters</groupId>
 			<artifactId>cors-filter</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>eu.freme.bservices.filters</groupId>
+			<groupId>eu.freme-project.bservices.filters</groupId>
 			<artifactId>proxy-filter</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>eu.freme.e-services</groupId>
+			<groupId>eu.freme-project.e-services</groupId>
 			<artifactId>publishing</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>eu.freme.e-services</groupId>
+			<groupId>eu.freme-project.e-services</groupId>
 			<artifactId>e-link</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>eu.freme.e-services</groupId>
+			<groupId>eu.freme-project.e-services</groupId>
 			<artifactId>dbpedia-spotlight</artifactId>
 		</dependency>
 		<dependency>
@@ -70,15 +70,14 @@
 		</dependency>
 		<dependency>
 			<artifactId>freme-ner</artifactId>
-			<groupId>eu.freme.e-services</groupId>
-			<version>0.12</version>
+			<groupId>eu.freme-project.e-services</groupId>
 		</dependency>
 		<dependency>
-			<groupId>eu.freme.bservices.filters</groupId>
+			<groupId>eu.freme-project.bservices.filters</groupId>
 			<artifactId>urlsupport-filter</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>eu.freme.bservices.controllers</groupId>
+			<groupId>eu.freme-project.bservices.controllers</groupId>
 		    <artifactId>xslt-converter</artifactId>
 		</dependency>
 	</dependencies>
