@@ -107,5 +107,11 @@
 			<artifactId>package-maker</artifactId>
 		</dependency>
 	</dependencies>
-
+	
+	<scm>
+		<connection>scm:git:git@github.com:freme-project/freme-packages.git</connection>
+		<url>scm:git:git@github.com/freme-project:freme-packages.git</url>
+		<developerConnection>scm:git:git@github.com:freme-project/freme-packages.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
 </project>
