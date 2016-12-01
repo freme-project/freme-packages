@@ -5,10 +5,10 @@
 	<parent>
 		<groupId>eu.freme.packages</groupId>
 		<artifactId>package-parent</artifactId>
-		<version>0.13-SNAPSHOT</version>
+		<version>0.12</version>
 	</parent>
 
-	<artifactId>freme-full</artifactId>
+	<artifactId>freme-docker</artifactId>
 
 	<dependencies>
 		<dependency>
