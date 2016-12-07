@@ -28,11 +28,11 @@
 
 
 	<build>
-		<plugins>		
+		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
-				<configuration 	combine.self="override"></configuration>	
+				<configuration combine.self="override"></configuration>
 			</plugin>
 			<plugin>
 				<groupId>com.spotify</groupId>
@@ -57,9 +57,15 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<finalName>app</finalName>	
+					<finalName>app</finalName>
 				</configuration>
 			</plugin>
 		</plugins>
- 	</build>
+	</build>
+
+	<scm>
+		<connection>scm:git:git@github.com:freme-project/freme-packages.git</connection>
+		<url>scm:git:git@github.com/freme-project:freme-packages.git</url>
+		<developerConnection>scm:git:git@github.com:freme-project/freme-packages.git</developerConnection>
+	</scm>
 </project>

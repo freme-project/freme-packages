@@ -6,9 +6,9 @@
 		<artifactId>package-parent</artifactId>
 		<version>0.13-SNAPSHOT</version>
 	</parent>
-	
+
 	<artifactId>broker-dev</artifactId>
-	
+
 	<developers>
 		<developer>
 			<name>Jan Nehring</name>
@@ -17,7 +17,7 @@
 			<organizationUrl>http://www.dfki.de</organizationUrl>
 		</developer>
 	</developers>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>eu.freme-project.e-services</groupId>
@@ -72,9 +72,15 @@
 			<artifactId>xslt-converter</artifactId>
 		</dependency>
 		<dependency>
-		    <groupId>eu.freme-project.bservices.filters</groupId>
-    		<artifactId>urlsupport-filter</artifactId>
+			<groupId>eu.freme-project.bservices.filters</groupId>
+			<artifactId>urlsupport-filter</artifactId>
 		</dependency>
 	</dependencies>
-	
+
+	<scm>
+		<connection>scm:git:git@github.com:freme-project/freme-packages.git</connection>
+		<url>scm:git:git@github.com/freme-project:freme-packages.git</url>
+		<developerConnection>scm:git:git@github.com:freme-project/freme-packages.git</developerConnection>
+	</scm>
+
 </project>
