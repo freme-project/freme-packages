@@ -10,7 +10,7 @@
 
 	<artifactId>freme-full</artifactId>
 
-	
+
 	<developers>
 		<developer>
 			<name>Jan Nehring</name>
@@ -94,7 +94,13 @@
 		</dependency>
 		<dependency>
 			<groupId>eu.freme-project.bservices.controllers</groupId>
-		    <artifactId>xslt-converter</artifactId>
+			<artifactId>xslt-converter</artifactId>
 		</dependency>
 	</dependencies>
+
+	<scm>
+		<connection>scm:git:git@github.com:freme-project/freme-packages.git</connection>
+		<url>scm:git:git@github.com/freme-project:freme-packages.git</url>
+		<developerConnection>scm:git:git@github.com:freme-project/freme-packages.git</developerConnection>
+	</scm>
 </project>
