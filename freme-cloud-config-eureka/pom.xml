@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>eu.freme.packages</groupId>
+    <groupId>eu.freme-project.packages</groupId>
     <artifactId>package-parent</artifactId>
     <version>0.9-SNAPSHOT</version>
   </parent>
@@ -10,14 +10,20 @@
   <dependencies>
 
   <dependency>
-  	<groupId>eu.freme.bservices.cloud</groupId>
+  	<groupId>eu.freme-project.bservices.cloud</groupId>
   	<artifactId>eureka-server</artifactId>
   	<version>0.1-SNAPSHOT</version>
   </dependency>
   <dependency>
-  	<groupId>eu.freme.bservices.cloud</groupId>
+  	<groupId>eu.freme-project.bservices.cloud</groupId>
   	<artifactId>config-server</artifactId>
   	<version>0.1-SNAPSHOT</version>
   </dependency>
   </dependencies>
+  
+  	<scm>
+		<connection>scm:git:git@github.com:freme-project/freme-packages.git</connection>
+		<url>scm:git:git@github.com/freme-project:freme-packages.git</url>
+		<developerConnection>scm:git:git@github.com:freme-project/freme-packages.git</developerConnection>
+	</scm>
 </project>

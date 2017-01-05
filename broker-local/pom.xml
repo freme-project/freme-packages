@@ -2,13 +2,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>eu.freme.packages</groupId>
+		<groupId>eu.freme-project.packages</groupId>
 		<artifactId>package-parent</artifactId>
 		<version>0.14-SNAPSHOT</version>
 	</parent>
 	<artifactId>broker-local</artifactId>
 
-	
+
 	<developers>
 		<developer>
 			<name>Jan Nehring</name>
@@ -20,80 +20,63 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>eu.freme.e-services</groupId>
+			<groupId>eu.freme-project.e-services</groupId>
 			<artifactId>tilde-services</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>eu.freme.bservices.controllers</groupId>
+			<groupId>eu.freme-project.bservices.controllers</groupId>
 			<artifactId>users</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>eu.freme.bservices.controllers</groupId>
+			<groupId>eu.freme-project.bservices.controllers</groupId>
 			<artifactId>nif-converter</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>eu.freme.bservices.filters</groupId>
+			<groupId>eu.freme-project.bservices.filters</groupId>
 			<artifactId>internationalization-filter</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>eu.freme.bservices.filters</groupId>
+			<groupId>eu.freme-project.bservices.filters</groupId>
 			<artifactId>logging</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>eu.freme.bservices.controllers</groupId>
+			<groupId>eu.freme-project.bservices.controllers</groupId>
 			<artifactId>pipelines</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>eu.freme.bservices.filters</groupId>
+			<groupId>eu.freme-project.bservices.filters</groupId>
 			<artifactId>postprocessing</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>eu.freme.bservices.filters</groupId>
+			<groupId>eu.freme-project.bservices.filters</groupId>
 			<artifactId>cors-filter</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>eu.freme.bservices.filters</groupId>
+			<groupId>eu.freme-project.bservices.filters</groupId>
 			<artifactId>proxy-filter</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>eu.freme.e-services</groupId>
+			<groupId>eu.freme-project.e-services</groupId>
 			<artifactId>publishing</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>eu.freme.e-services</groupId>
+			<groupId>eu.freme-project.e-services</groupId>
 			<artifactId>e-link</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>eu.freme.e-services</groupId>
+			<groupId>eu.freme-project.e-services</groupId>
 			<artifactId>dbpedia-spotlight</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>eu.freme.bservices.controllers</groupId>
+			<groupId>eu.freme-project.bservices.controllers</groupId>
 			<artifactId>xslt-converter</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>eu.freme.bservices.filters</groupId>
+			<groupId>eu.freme-project.bservices.filters</groupId>
 			<artifactId>urlsupport-filter</artifactId>
 		</dependency>
 	</dependencies>
-	<repositories>
-		<repository>
-			<id>freme-release</id>
-			<name>freme-nexus</name>
-			<url>http://rv1443.1blu.de/nexus/content/repositories/releases/</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-		<repository>
-			<id>freme-nexus</id>
-			<name>freme-nexus</name>
-			<url>http://rv1443.1blu.de/nexus/content/repositories/snapshots/</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-		</repository>
-	</repositories>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -110,4 +93,10 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<scm>
+		<connection>scm:git:git@github.com:freme-project/freme-packages.git</connection>
+		<url>scm:git:git@github.com/freme-project:freme-packages.git</url>
+		<developerConnection>scm:git:git@github.com:freme-project/freme-packages.git</developerConnection>
+	</scm>
 </project>
