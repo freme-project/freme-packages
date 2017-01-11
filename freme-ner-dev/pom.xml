@@ -21,7 +21,6 @@
 		<dependency>
 			<artifactId>freme-ner</artifactId>
 			<groupId>eu.freme-project.e-services</groupId>
-			<version>0.13-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>eu.freme-project.bservices.filters</groupId>
