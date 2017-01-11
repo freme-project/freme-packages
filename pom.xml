@@ -7,10 +7,10 @@
 	<parent>
 		<groupId>eu.freme-project</groupId>
 		<artifactId>freme-parent</artifactId>
-		<version>0.14-SNAPSHOT</version>
+		<version>0.17</version>
 	</parent>
 
-	<version>0.13-SNAPSHOT</version>
+	<version>0.14-SNAPSHOT</version>
 	
 	<modules>
 		<module>broker-dev</module>
