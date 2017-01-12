@@ -90,7 +90,7 @@
 							<goal>unpack-dependencies</goal>
 						</goals>
 						<configuration>
-							<includeGroupIds>eu.freme.bservices</includeGroupIds>
+							<includeGroupIds>eu.freme-project.bservices</includeGroupIds>
 							<includeArtifactIds>package-maker</includeArtifactIds>
 							<outputDirectory>${basedir}/target/freme-package</outputDirectory>
 							<excludes>META-INF/</excludes>
