@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>eu.freme-project.packages</groupId>
 		<artifactId>package-parent</artifactId>
-		<version>0.15-SNAPSHOT</version>
+		<version>0.15</version>
 	</parent>
 
 	<artifactId>freme-full</artifactId>
@@ -96,6 +96,6 @@
 		<connection>scm:git:git@github.com:freme-project/freme-packages.git</connection>
 		<url>scm:git:git@github.com/freme-project:freme-packages.git</url>
 		<developerConnection>scm:git:git@github.com:freme-project/freme-packages.git</developerConnection>
-	  <tag>HEAD</tag>
+	  <tag>package-parent-0.15</tag>
   </scm>
 </project>
