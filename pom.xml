@@ -10,7 +10,7 @@
 		<version>0.17</version>
 	</parent>
 
-	<version>0.15</version>
+	<version>0.16-SNAPSHOT</version>
 	
 	<modules>
 		<module>broker-dev</module>
@@ -112,6 +112,6 @@
 		<connection>scm:git:git@github.com:freme-project/freme-packages.git</connection>
 		<url>scm:git:git@github.com/freme-project:freme-packages.git</url>
 		<developerConnection>scm:git:git@github.com:freme-project/freme-packages.git</developerConnection>
-	  <tag>package-parent-0.15</tag>
+	  <tag>HEAD</tag>
   </scm>
 </project>
