@@ -21,6 +21,8 @@
 	<import resource="classpath:spring-configurations/proxy-filter.xml" />
 	<import resource="classpath:spring-configurations/nif-converter.xml" />
 	<import resource="classpath:spring-configurations/xslt-converter.xml" />
+	<import resource="classpath:spring-configurations/tika-filter.xml" />
+	
 	
 	
 	<!-- e-services -->

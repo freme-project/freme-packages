@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
@@ -90,12 +91,16 @@
 			<groupId>eu.freme-project.bservices.controllers</groupId>
 			<artifactId>xslt-converter</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>eu.freme-project.bservices.filters</groupId>
+			<artifactId>tika-filter</artifactId>
+		</dependency>
 	</dependencies>
 
 	<scm>
 		<connection>scm:git:git@github.com:freme-project/freme-packages.git</connection>
 		<url>scm:git:git@github.com/freme-project:freme-packages.git</url>
 		<developerConnection>scm:git:git@github.com:freme-project/freme-packages.git</developerConnection>
-	  <tag>HEAD</tag>
-  </scm>
+		<tag>HEAD</tag>
+	</scm>
 </project>
