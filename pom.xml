@@ -17,6 +17,7 @@
 		<module>broker-local</module>
 		<module>freme-ner-dev</module>
 		<module>freme-full</module>
+		<module>freme-docker</module>
 	</modules>
 
 	<build>
