@@ -3,7 +3,7 @@
 	<parent>
 		<groupId>eu.freme-project.packages</groupId>
 		<artifactId>package-parent</artifactId>
-		<version>1.2-SNAPSHOT</version>
+		<version>1.2</version>
 	</parent>
 	<artifactId>broker-local</artifactId>
 
@@ -104,6 +104,6 @@
 		<connection>scm:git:git@github.com:freme-project/freme-packages.git</connection>
 		<url>scm:git:git@github.com/freme-project:freme-packages.git</url>
 		<developerConnection>scm:git:git@github.com:freme-project/freme-packages.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>package-parent-1.2</tag>
 	</scm>
 </project>
